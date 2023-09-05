@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        height: 650px;
+
+
+    }
+    .log
+    {
+        margin-left: 42%;
+        height:350px;
+        width:300px;
+        background-color: white;
+        opacity: 70%;
+
+    }
+    .sty
+    {
+        font-size:20px;
+        color:blue;
+        margin-left: 20px;
+    }
+
+
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="log">
+     <h2 style="text-align:center; color: blue;">LOGIN</h2>
+    <br>
+
+    <form action="login" method="POST">
+        {% csrf_token %}
+        <span class="sty"> Username: </span>
+        <input type="text" name="username" required=""><br><br>
+        <span class="sty"> Password:</span>
+        <input type="password" name="password" required=""><br><br><br>
+
+        <br><br>
+        <input type="submit" value="LOGIN"><br><br>
+    </form>
+</div>
+</body>
+</html>
